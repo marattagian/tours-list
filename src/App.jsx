@@ -21,6 +21,9 @@ function App() {
     }
   }
 
+  const removeTour = (id) => setTours(tours.filter((tour) => tour.id !== id))
+  
+
   useEffect(() => {
     fetchTours()
   },[])
@@ -31,13 +34,14 @@ function App() {
         <Loading />
       </div>
     )
-  }else {
-    return(
-      <div className="main-container">
-        <Tours tours={tours} />
-      </div>
-    )
   }
+
+  return(
+    <div className="main-container">
+      <Tours tours={tours} removeTour={removeTour} />
+    </div>
+  )
+  
 
 }
 

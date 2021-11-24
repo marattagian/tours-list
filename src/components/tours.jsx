@@ -1,6 +1,6 @@
 import Tour from "./tour"
 
-const Tours = ({ tours }) => {
+const Tours = ({ tours, removeTour }) => {
   return(
     <section className="p-6">
       <div className="is-flex is-justify-content-center">
@@ -10,7 +10,7 @@ const Tours = ({ tours }) => {
       <div className="container">
         {
           tours.map((tour) => {
-            return <Tour key={tour.id} {...tour} />
+            return <Tour key={tour.id} {...tour} removeTour={removeTour} />
           })
         }
       </div>
