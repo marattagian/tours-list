@@ -8,7 +8,7 @@ const Tour = ({ id, info, image, name, price, removeTour }) => {
     <div className="card-content">
       <div className="is-flex is-justify-content-space-between pr-4">
         <h3 className="subtitle is-4" >{name}</h3>
-        <h5 className="tag">${price}</h5>
+        <h5 className="tag is-info is-light is-medium">${price}</h5>
       </div>
       <p className="pt-4">{info}</p>
     </div>
